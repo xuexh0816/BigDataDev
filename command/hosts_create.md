@@ -116,6 +116,7 @@ docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/master:/hom
 docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work1:/home \
 -v /etc/localtime:/etc/localtime:ro \
 -p 10122:22 \
+-p 19092:9092 \
 --name work1 \
 --hostname work1 \
 --add-host master:192.168.5.80 \
@@ -130,6 +131,7 @@ docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work1:/home
 docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work2:/home \
 -v /etc/localtime:/etc/localtime:ro \
 -p 10222:22 \
+-p 29092:9092 \
 --name work2 \
 --hostname work2 \
 --add-host master:192.168.5.80 \
@@ -144,6 +146,7 @@ docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work2:/home
 docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work3:/home \
 -v /etc/localtime:/etc/localtime:ro \
 -p 10322:22 \
+-p 39092:9092 \
 --name work3 \
 --hostname work3 \
 --add-host master:192.168.5.80 \
