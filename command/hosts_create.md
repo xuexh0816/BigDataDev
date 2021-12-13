@@ -98,6 +98,7 @@ cp /Users/xuexh/Documents/works/docker_cluster/hosts/master \
 ### 3.2 创建容器
 ```shell
 docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/master:/home \
+--platform linux/amd64 \
 -v /etc/localtime:/etc/localtime:ro \
 -p 13000:3000 \
 -p 19090:9090 \
@@ -111,7 +112,7 @@ docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/master:/hom
 --net netxxh \
 --ip 192.168.5.80 \
 --dns 114.114.114.114 \
---privileged master:0.0.2 /usr/sbin/init
+--privileged centos:centos8 /usr/sbin/init
 
 docker run -itd -v /Users/xuexh/Documents/works/docker_cluster/hosts/work1:/home \
 -v /etc/localtime:/etc/localtime:ro \

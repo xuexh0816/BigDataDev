@@ -17,3 +17,4 @@ explicit_defaults_for_timestamp=true
 
 ./bin/mysqld --defaults-file=./my.cnf --basedir=/home/xuexh/parcels/mysql/mysql-5.7.30-linux-glibc2.12-x86_64/ \
 --datadir=/home/xuexh/parcels/mysql/mysql-5.7.30-linux-glibc2.12-x86_64/datadir/ --user=mysql --initialize
+
